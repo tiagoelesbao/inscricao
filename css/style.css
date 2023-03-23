@@ -67,7 +67,7 @@ p {
 }
 
 .text-gradient-blue {
-  background: linear-gradient(89.78deg, #1A51C6 0.19%, #449BF0 0.2%, #449BF0 99.82%);
+  background: linear-gradient(89.78deg, #1A51C6 0.19%, #e4f044 0.2%, #f0a044 99.82%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

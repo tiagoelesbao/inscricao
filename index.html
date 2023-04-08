@@ -141,7 +141,7 @@
             <div class="modal-body form-modal">
             <p><span>Digite o seu e-mail abaixo</span> e garanta vaga no <span>Projeto Drop Servicer</span> que te mostrará como é possível faturar 5 dígitos apenas com Drop Services...</p>
             <form method="POST"
-                action="https://api.sheetmonkey.io/form/48bCzuaTtsMLZxEPuwM27w" method="post" id="form-id" style="text-align: center;" data-toggle="validator">
+                action="https://script.google.com/macros/s/AKfycbwH9eMxHwdcHLH2XDHPRHNwoJxteB0XbH1F1jTBoRFlQQGtYGipIFm88BwtODtFuUvs/exec" method="post" id="form-id" style="text-align: center;" data-toggle="validator">
 
                 <input type="hidden" name="cadastro_confirmado" value="https://chat.whatsapp.com/EbUzRttzRhcBz9VefZOg3n">
                 <!--  UTM'S -->
@@ -174,6 +174,22 @@
                 
                 <button type="submit" name="submit" class="button btn-submit" id="btn-submit-modal"> <img src="img/whatsapp.svg">ENTRAR NO GRUPO DO WHATSAPP</button>
             </form>
+            <script>
+              var form = document.getElementById("form-id");
+              form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                var xhr = new XMLHttpRequest();
+                xhr.open(form.method, form.action);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                  if (xhr.readyState === 4 && xhr.status === 200) {
+                    window.open("https://chat.whatsapp.com/EbUzRttzRhcBz9VefZOg3n");
+                  }
+                };
+                var data = new FormData(form);
+                xhr.send(new URLSearchParams(data).toString());
+              });
+            </script>
             <span class="aviso">* Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que você possa receber todos os conteúdos da série gratuita.</span>
             </div>
         </div>  
